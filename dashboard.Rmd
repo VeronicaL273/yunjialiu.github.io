@@ -1,19 +1,22 @@
 ---
-title: "plotly"
+title: "Plotly in Dashboard"
+
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  flexdashboard::flex_dashboard:
     theme: flatly
-    highlight: tango
+    orientation: columns
+    vertical_layout: fill
 ---
-```{r, include=FALSE}
+
+```{r setup, include=FALSE}
+library(flexdashboard)
 library(p8105.datasets)
 library(tidyverse)
 library(plotly)
 library(ggplot2)
 library(ggridges)
 ```
+
 
 ```{r}
 data(rest_inspec)
@@ -40,10 +43,12 @@ nyc_latest_inspection =
   ungroup()
 ```
 
+Column {data-width=650}
+-----------------------------------------------------------------------
 
-```{r, warning=FALSE, message=FALSE}
-# Box plot of inspection scores grouped by some cuisine type
+### Chart A
 
+```{r}
 nyc_latest_inspection |>
   plot_ly(x = ~cuisine_description, y = ~score, type = 'box',color = ~cuisine_description,colors = "viridis") |>
   layout(
@@ -51,9 +56,12 @@ nyc_latest_inspection |>
     yaxis = list(title = "Inspection Score"),
     xaxis = list(title = "Cuisine")
     )
-
 ```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
 
 ```{r}
 nyc_latest_inspection |>
@@ -67,16 +75,17 @@ nyc_latest_inspection |>
   ) |>
   mutate(cuisine_description = fct_reorder(cuisine_description, proportion_a)) |>
   plot_ly(x = ~cuisine_description, y = ~proportion_a, color = ~cuisine_description, type = "bar", colors = "viridis") |>
-  layout(
-    title = "Precentage of A-graded resturants among Different Cuisine in MANHATTAN",
+    layout(
+    title = list(text = "Precentage of A-graded resturants among Different Cuisine in MANHATTAN",
+                 font = list(size = 10)),
     yaxis = list(title = "Precentage of A-graded resturants"),
     xaxis = list(title = "Cuisine")
     )
-
 ```
 
-```{r}
+### Chart C
 
+```{r}
 notcritical_density <- density(nyc_latest_inspection$score[nyc_latest_inspection$critical_flag == "Not Critical"])
 critical_density <- density(nyc_latest_inspection$score[nyc_latest_inspection$critical_flag == "Critical"])
 
@@ -92,7 +101,5 @@ plot_ly() |>
                        x = 0.5,
                        y = -0.2,
                        xanchor = "center"))
-
-
 ```
 
