@@ -1,0 +1,22 @@
+---
+title: "Welcome Yunjia Liu Personal Page!"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: tango
+---
+
+<div style="text-align: center;">
+  <img src="image/IMG_1589.JPG" style="width:70%; border: 2px solid #ddd; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+</div>
+
+---
+### About Me
+
+**Hi, I'm Yunjia (Veronica) Liu,** a Master’s student in Biostatistics at Columbia University. I'm passionate about **statistical genetics**, **computational genomics**, and **bioinformatics research**. Below, you’ll find more about my academic journey, experience, and interests.
+
+### Connect with Me
+- [GitHub Profile](https://github.com/VeronicaL273)
+- [Email Me](mailto:yl5830@cumc.columbia.edu)
