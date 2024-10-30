@@ -2,7 +2,7 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About me"
+    - text: "About"
       href: about.html
     - text: "CV"
       href: cv.html
@@ -14,4 +14,4 @@ navbar:
       href: http://github.com/VeronicaL273/
 output:
   html_document:
-    theme: cerulean
+    theme: flatly

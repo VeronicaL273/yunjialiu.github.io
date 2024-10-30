@@ -1,9 +1,7 @@
 ---
-title: "Welcome Yunjia Liu Personal Page!"
+title: "Welcome Yunjia Liu's Personal Page!"
 output: 
   html_document:
-    toc: true
-    toc_float: true
     theme: flatly
     highlight: tango
 ---
@@ -15,8 +13,5 @@ output:
 ---
 ### About Me
 
-**Hi, I'm Yunjia (Veronica) Liu,** a Master’s student in Biostatistics at Columbia University. I'm passionate about **statistical genetics**, **computational genomics**, and **bioinformatics research**. Below, you’ll find more about my academic journey, experience, and interests.
+**Hi, I'm Yunjia (Veronica) Liu,** a Master’s student in Biostatistics at Columbia University. I'm passionate about **statistical genetics**, **computational genomics**, and **bioinformatics research**. Below, you’ll find more about my academic journey, research experience, and interests.
 
-### Connect with Me
-- [GitHub Profile](https://github.com/VeronicaL273)
-- [Email Me](mailto:yl5830@cumc.columbia.edu)

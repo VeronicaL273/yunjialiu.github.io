@@ -1,9 +1,17 @@
 ---
-title: "About me"
+title: "About Me"
 output: 
   html_document:
-    toc: true
-    toc_float: true
-    theme: cerulean
+    theme: flatly
 ---
+
+**Yunjia (Veronica) Liu** is currently pursuing a Master of Science in Biostatistics at Columbia University, with a focus on statistical genomics. She earned her Bachelor of Science in Biology from Fudan University, where she developed a strong foundation in genetics, bioinformatics, and computational biology. Her coursework has covered areas like epigenetics, biostatistics, and high-throughput sequencing data analysis, equipping her with a versatile skill set.
+
+
+Yunjia's research experience spans several projects, including developing a pseudogene identification system for clinical diagnostics and investigating mutations in glioblastoma through single-cell RNA sequencing. Her work has led to contributions to published studies, such as her role in improving large-scale functional annotations using protein language models.
+
+
+She is proficient in a range of technical skills including R, Python, and SPSS, and has hands-on experience with various molecular biology techniques such as PCR, protein purification, and cell transfection. Yunjia is passionate about computational genomics and aims to apply data-driven methods to enhance personalized medicine and healthcare solutions.
+
+
 

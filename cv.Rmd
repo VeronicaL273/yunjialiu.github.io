@@ -1,6 +1,34 @@
 ---
-title: "cv"
-author: "Yunjia Liu"
-date: "2024-10-30"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
 ---
+
+### **Education Background**                                                                                       
+**School of Life Science, Fudan University(09/2019-06/2024)**  
+Bachelor of Science in Biology
+
+
+**Mailman School of Public Health, Columbia University (09/2024-present)**    
+Master of Science in Biostatistics, statistical genomics track
+
+### **Publications**
+- **Wang, S., You, R., Liu, Y., Xiong, Y., & Zhu, S. (2023).** NetGO 3.0: Protein Language Model Improves Large-scale Functional Annotations. *Genomics, Proteomics & Bioinformatics.* https://doi.org/10.1016/j.gpb.2023.04.001
+
+
+### **Research Experience**
+- **Pseudogene Assessment Project (2023-2024)**  
+  Developed a querying system tailored for hospitals and sequencing companies to identify the potential presence of pseudogenes during genetic sequencing. This project aims to improve clinical genetic diagnostics by leveraging second- and third-generation sequencing technologies.
+
+- **Research on Glioblastoma with H3.3G34R Mutations (2022-2023)**  
+  Investigated mutations in glioblastoma through single-cell RNA sequencing (scRNA-seq) analysis. This research focused on KRAS and TP53 pathway alterations, aiming to identify reliable biomarkers for early detection of glioblastomas.
+
+- **Prognostic Diagnosis of Stroke Patients (2020-2022)**  
+  Led a project to develop a scoring system predicting the probability of post-stroke pneumonia. This effort involved machine learning models, including XGBoost and LightGBM, which improved predictive accuracy significantly.
+  
+### **Technical Skills**
+- **Programming Languages:** R, Python, SPSS
+- **Molecular Biology Techniques:** PCR, Molecular Cloning, Protein Purification, Cell Transfection, Western Blot
+- **Other:** Microarray Chips, High-throughput Sequencing Data Analysis
