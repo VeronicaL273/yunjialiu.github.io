@@ -17,6 +17,7 @@ library(ggplot2)
 library(ggridges)
 ```
 
+<a href="https://veronical273.github.io/yunjialiu.github.io/index.html" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Return to Homepage</a>
 
 ```{r}
 data(rest_inspec)
@@ -102,4 +103,5 @@ plot_ly() |>
                        y = -0.2,
                        xanchor = "center"))
 ```
+
 
