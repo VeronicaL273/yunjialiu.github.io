@@ -1,0 +1,71 @@
+---
+title: "plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: flatly
+    highlight: tango
+---
+```{r, include=FALSE}
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+```
+
+```{r}
+data(rest_inspec)
+
+
+rest_inspec_clean = 
+  rest_inspec |>
+  janitor::clean_names() |>
+  select(boro,critical_flag,cuisine_description,inspection_date,inspection_type,score,grade,camis) |>
+  filter(boro == "MANHATTAN",
+         cuisine_description %in% c("American","Chinese","Thai","French","Italian","Japanese","Mexican",
+            "Indian","Russian","Brazilian","Caribbean",
+            "Latin (Cuban, Dominican, Puerto Rican, South & Central American)","Mediterranean",
+            "Middle Eastern","Peruvian","Spanish","Jewish/Kosher"),
+         score > 0) |>
+  mutate(cuisine_description = str_replace(cuisine_description, 
+                                           "Latin \\(Cuban, Dominican, Puerto Rican, South & Central American\\)", 
+                                           "Latin"))
+nyc_latest_inspection =
+  rest_inspec_clean |>
+  group_by(camis) |> 
+  slice_max(inspection_date, with_ties = FALSE) |>
+  ungroup()
+```
+
+
+```{r, warning=FALSE, message=FALSE}
+# Box plot of inspection scores grouped by some cuisine type
+
+
+nyc_latest_inspection |>
+  plot_ly(x = ~cuisine_description, y = ~score, type = 'box',color = ~cuisine_description,colors = "viridis") |>
+  layout(
+    title = "Score Distribution by Cuisine Type in MANHATTAN",
+    yaxis = list(title = "Inspection Score"),
+    xaxis = list(title = "Cuisine")
+    )
+
+```
+
+
+```{r}
+nyc_latest_inspection |>
+  drop_na(grade) |>
+  filter(grade != "Not Yet Graded") |>
+  group_by(cuisine_description) |>  
+  summarize(
+    total_count = n(), 
+    grade_a_count = sum(grade == "A", na.rm = TRUE), 
+    proportion_a = grade_a_count / total_count
+  ) |>
+  mutate(cuisine_description = fct_reorder(cuisine_description, proportion_a)) |>
+  plot_ly(x = ~cuisine_description, y = ~proportion_a, color = ~cuisine_description, type = "bar", colors = "viridis")
+
+```
+
+

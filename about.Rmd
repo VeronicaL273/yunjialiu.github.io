@@ -3,6 +3,7 @@ title: "About Me"
 output: 
   html_document:
     theme: flatly
+    highlight: tango
 ---
 
 **Yunjia (Veronica) Liu** is currently pursuing a Master of Science in Biostatistics at Columbia University, with a focus on statistical genomics. She earned her Bachelor of Science in Biology from Fudan University, where she developed a strong foundation in genetics, bioinformatics, and computational biology. Her coursework has covered areas like epigenetics, biostatistics, and high-throughput sequencing data analysis, equipping her with a versatile skill set.
